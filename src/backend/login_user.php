@@ -8,7 +8,8 @@ $sql = "SELECT * FROM users WHERE email_user = '$email' AND password_user = '$pa
 $result = mysqli_query($connection, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-    echo "Login Realizado Com Sucesso!";
+    header("Location: ../pages/home.php");
+    exit();
 } else {
     echo "Login Não Foi Realizado";
 }
