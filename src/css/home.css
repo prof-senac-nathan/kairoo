@@ -2,6 +2,7 @@
 
 body {
     background: #f5e6ff;
+    font-family: 'Poppins';
 }
 
 .bg-header {
@@ -11,17 +12,53 @@ body {
 .btn-header {
     background: #8e21db;
     color: #fec107;
-    font-family: 'Poppins';
     border-bottom: 6px solid #6e02bb;
     border-right: 6px solid #6e02bb;
     width: 150px;
     transition: .2s;
 }
 
-a:hover, .active {
+a:hover, .active, .navbar-menu:hover {
     background: #fec107;
     color: #ec8842;
     border-bottom: 6px solid #ec8842;
     border-right: 6px solid #ec8842;
 }
 
+.navbar-menu {
+    background: #8e21db;
+    border-top: none;
+    border-left: none;
+    border-bottom: 6px solid #6e02bb;
+    border-right: 6px solid #6e02bb;
+    transition: .2s;
+}
+
+.navbar-menu:not(.collapsed) {
+    background: #fec107;
+    color: #ec8842;
+    border-bottom: 6px solid #ec8842;
+    border-right: 6px solid #ec8842;
+}
+
+.btn-collapseBar {
+    background: #8e21db;
+    color: #fec107;
+    border-bottom: 6px solid #6e02bb;
+    border-right: 6px solid #6e02bb;
+    transition: .2s;
+}
+
+.box {
+    background: #c190e5;
+    text-align: justify;
+    width: 500px;
+    height: 350px;
+}
+
+.boxBook {
+    background: #c190e5;
+    text-align: justify;
+    width: 650px;
+    height: 750px;
+}

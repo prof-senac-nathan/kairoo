@@ -17,7 +17,9 @@ $sql = "INSERT INTO users (name_user, email_user, password_user) VALUES ('$name'
 $result = mysqli_query($connection, $sql);
 
 if ($result) {
-    echo "Seu cadastro foi concluído!";
+    sleep(2);
+    header("Location: ../pages/registration-success.php");
+    exit();
 }
 
 mysqli_close($connection);
