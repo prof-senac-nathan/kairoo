@@ -1,0 +1,22 @@
+body {
+  height: 100vh;
+  background: url("../imgs/background.png") no-repeat center;
+  background-size: cover;
+}
+
+.mainForm {
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.button {
+  background: #9b07b4;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #7d0792;
+  color: white;
+}
