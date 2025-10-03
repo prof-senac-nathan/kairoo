@@ -64,73 +64,63 @@
         </div>
     </nav>
 
-    <main>
-        <div class="d-flex justify-content-center">
-            <div class="row mt-5">
-                <div class="col">
-                    <div class="row">
-                        <div class="box p-3 rounded-3">
-                            <h2>Lorem ipsum dolor</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                                provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                                libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
-                        </div>
-                    </div>
+    <main class="d-flex mx-3 my-5">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-12 col-12 d-flex flex-column gap-4">
+                <div class="box p-3 rounded-3">
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
+                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
+                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                </div>
 
-                    <div class="row">
-                        <div class="box p-3 rounded-3 mt-5">
-                            <h2>Lorem ipsum dolor</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                                provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                                libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                <div class="box p-3 rounded-3">
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
+                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
+                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 my-5 col-12 text-center">
+                <div class="boxBook p-3 rounded-3 d-flex justify-content-center align-items-center">
+                    <div class="cardBook">
+                        <div class="coverBook">
+                            <img src="src/imgs/coverBook.png" class="img-fluid">
+                            <!--       <img src="../imgs/coverBook.png"> -->
+                        </div>
+
+                        <div class="contentBook">
+                            <h2>Titulo</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel iusto repellat
+                                tenetur laboriosam suscipit magnam ducimus enim dolores animi a, veniam quas hic,
+                                reiciendis quibusdam labore aut neque iure.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel iusto repellat
+                                tenetur laboriosam suscipit magnam ducimus enim dolores animi a, veniam quas hic,
+                                reiciendis quibusdam labore aut neque iure.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel iusto repellat
+                                tenetur laboriosam suscipit magnam ducimus enim dolores animi a, veniam quas hic,
+                                reiciendis quibusdam labore aut neque iure.
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col mx-5">
-                    <div class="boxBook p-3 rounded 3 d-flex justify-content-center align-items-center">
-                        <div class="cardBook">
-                            <div class="coverBook">
-                                <img src="src/imgs/coverBook.png">
-                                <!--       <img src="../imgs/coverBook.png"> -->
-                            </div>
-
-                            <div class="contentBook">
-                                <h2>Titulo</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel iusto repellat
-                                    tenetur laboriosam suscipit magnam ducimus enim dolores animi a, veniam quas hic,
-                                    reiciendis quibusdam labore aut neque iure.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel iusto repellat
-                                    tenetur laboriosam suscipit magnam ducimus enim dolores animi a, veniam quas hic,
-                                    reiciendis quibusdam labore aut neque iure.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel iusto repellat
-                                    tenetur laboriosam suscipit magnam ducimus enim dolores animi a, veniam quas hic,
-                                    reiciendis quibusdam labore aut neque iure.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-3 col-md-12 col-12 d-flex flex-column gap-4">
+                <div class="box p-3 rounded-3">
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
+                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
+                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
                 </div>
 
-                <div class="col">
-                    <div class="row">
-                        <div class="box p-3 rounded-3">
-                            <h2>Lorem ipsum dolor</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                                provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                                libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="box p-3 rounded-3 mt-5">
-                            <h2>Lorem ipsum dolor</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                                provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                                libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
-                        </div>
-                    </div>
+                <div class="box p-3 rounded-3">
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
+                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
+                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
                 </div>
             </div>
         </div>

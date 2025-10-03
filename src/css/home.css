@@ -1,64 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-    background: #f5e6ff;
-    font-family: 'Poppins';
+  background: #f5e6ff;
+  font-family: "Poppins";
 }
 
 .bg-header {
-    background: #48005d;
+  background: #48005d;
 }
 
 .btn-header {
-    background: #8e21db;
-    color: #fec107;
-    border-bottom: 6px solid #6e02bb;
-    border-right: 6px solid #6e02bb;
-    width: 150px;
-    transition: .2s;
+  background: #8e21db;
+  color: #fec107;
+  border-bottom: 6px solid #6e02bb;
+  border-right: 6px solid #6e02bb;
+  width: 150px;
+  transition: 0.2s;
 }
 
-a:hover, .active, .navbar-menu:hover {
-    background: #fec107;
-    color: #ec8842;
-    border-bottom: 6px solid #ec8842;
-    border-right: 6px solid #ec8842;
+a:hover,
+.active,
+.navbar-menu:hover {
+  background: #fec107;
+  color: #ec8842;
+  border-bottom: 6px solid #ec8842;
+  border-right: 6px solid #ec8842;
 }
 
 .navbar-menu {
-    background: #8e21db;
-    border-top: none;
-    border-left: none;
-    border-bottom: 6px solid #6e02bb;
-    border-right: 6px solid #6e02bb;
-    transition: .2s;
+  background: #8e21db;
+  border-top: none;
+  border-left: none;
+  border-bottom: 6px solid #6e02bb;
+  border-right: 6px solid #6e02bb;
+  transition: 0.2s;
 }
 
 .navbar-menu:not(.collapsed) {
-    background: #fec107;
-    color: #ec8842;
-    border-bottom: 6px solid #ec8842;
-    border-right: 6px solid #ec8842;
+  background: #fec107;
+  color: #ec8842;
+  border-bottom: 6px solid #ec8842;
+  border-right: 6px solid #ec8842;
 }
 
 .btn-collapseBar {
-    background: #8e21db;
-    color: #fec107;
-    border-bottom: 6px solid #6e02bb;
-    border-right: 6px solid #6e02bb;
-    transition: .2s;
+  background: #8e21db;
+  color: #fec107;
+  border-bottom: 6px solid #6e02bb;
+  border-right: 6px solid #6e02bb;
+  transition: 0.2s;
 }
 
 .box {
-    background: #c190e5;
-    text-align: justify;
-    width: 500px;
-    height: 350px;
+  background: #c190e5;
+  text-align: justify;
+  height: 300px;
 }
 
 .boxBook {
-    background: #c190e5;
-    text-align: justify;
-    width: 650px;
-    height: 750px;
+  background: #c190e5;
+  text-align: justify;
+  /* width: 650px;
+  height: 750px; */
+}
+
+@media (max-width: 1320px) {
+    .box {
+        height: 400px;
+    }
 }
