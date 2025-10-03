@@ -8,10 +8,17 @@ $sql = "SELECT * FROM users WHERE email_user = '$email' AND password_user = '$pa
 $result = mysqli_query($connection, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-    header("Location: ../pages/home.php");
-    exit();
+    if (str_contains($email, '@edu')) {
+        header("Location: ../pages/aluno.html");
+        exit();
+    } elseif (str_contains($email, '@prof')) {
+        header("Location: ../pages/prof.html");
+        exit();
+    } else {
+        echo "Tipo de usuário desconhecido.";
+    }
 } else {
-    echo "Login Não Foi Realizado";
+    echo "Usuário ou senha incorretos.";
 }
 
 mysqli_close($connection);

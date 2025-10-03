@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,47 +10,58 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="shortcut icon" href="../imgs/kairoo.png" type="image/x-icon">
 </head>
+
 <body>
-<nav class="navbar bg-header py-4">
-    <div class="container-fluid ms-3 me-3">
+    <nav class="navbar bg-header py-4">
+        <div class="container-fluid ms-3 me-3">
             <img src="../imgs/logoheader.png" alt="Kairoo" width="150px">
 
-        <ul class="nav">
-            <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-            <a href="home.php" class="me-4 text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">INÍCIO</a>
-            </li>
-
-            <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-            <a href="about.php" class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5" aria-current="page">SOBRE</a>
-            </li>
-
-            <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-            <a href="play.php" class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">JOGAR</a>
-            </li>
-
-            <li class="nav-item d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block">
-                <button class="navbar-menu rounded-3 p-2 align-items-center d-flex" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="#navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </li>
-        </ul>
-        <!--Menu oculto (para celulares)----------------------------->
-        <div class="collapse navbar-collapse d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item mt-3 mb-3 ">
-                <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center" href="home.php">INÍCIO</a>
+            <ul class="nav">
+                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                    <a href="../../index.php"
+                        class="me-4 text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">INÍCIO</a>
                 </li>
 
-                <li class="nav-item mb-3">
-                <a class="active fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center" href="#">SOBRE</a>
+                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                    <a href="about.php"
+                        class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                        aria-current="page">SOBRE</a>
                 </li>
 
-                <li class="nav-item">
-                <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center" aria-current="page" href="play.php">JOGAR</a>
+                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                    <a href="play.php"
+                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">JOGAR</a>
+                </li>
+
+                <li class="nav-item d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block">
+                    <button class="navbar-menu rounded-3 p-2 align-items-center d-flex" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                        aria-controls="#navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                 </li>
             </ul>
-       </div>
-    </div>
-</nav>
+            <!--Menu oculto (para celulares)----------------------------->
+            <div class="collapse navbar-collapse d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block"
+                id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item mt-3 mb-3 ">
+                        <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
+                            href="../../index.php">INÍCIO</a>
+                    </li>
+
+                    <li class="nav-item mb-3">
+                        <a class="active fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
+                            href="#">SOBRE</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
+                            aria-current="page" href="play.php">JOGAR</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -61,4 +73,5 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

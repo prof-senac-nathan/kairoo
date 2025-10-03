@@ -7,17 +7,18 @@
     <title>Kairoo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="shortcut icon" href="src/imgs/kairoo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../imgs/kairoo.png" type="image/x-icon">
 </head>
 
 <body class="py-4">
     <main class="w-100 m-auto text-center mainForm">
-        <form action="src/backend/register_user.php" class="needs-validation" method="post" novalidate>
-            <img src="src/imgs/logokairoo.png" class="mb-4" width="250">
+        <form action="../backend/register_user.php" class="needs-validation" method="post" novalidate>
+            <img src="../imgs/logokairoo.png" class="mb-4" width="250">
 
             <div class="form-floating">
-                <input type="text" name="name_user" class="form-control border border-0 validacaoUsuario" id="floatingInput" placeholder="email" required>
+                <input type="text" name="name_user" class="form-control border border-0 validacaoUsuario"
+                    id="floatingInput" placeholder="email" required>
                 <label for="floatingInput">Nome de Usuário</label>
 
                 <div class="valid-feedback"></div>
@@ -25,7 +26,8 @@
             </div>
 
             <div class="form-floating mt-3">
-                <input type="email" name="email_user" class="form-control border border-0 validacaoEmail" id="floatingInput" placeholder="email" required>
+                <input type="email" name="email_user" class="form-control border border-0 validacaoEmail"
+                    id="floatingInput" placeholder="email" required>
                 <label for="floatingInput">E-mail</label>
 
                 <div class="valid-feedback"></div>
@@ -33,7 +35,8 @@
             </div>
 
             <div class="form-floating mt-3">
-                <input type="password" name="password_user" class="form-control border border-0 validacaoSenha" id="floatingInput" placeholder="password" required>
+                <input type="password" name="password_user" class="form-control border border-0 validacaoSenha"
+                    id="floatingInput" placeholder="password" required>
                 <label for="floatingInput">Senha</label>
 
                 <div class="valid-feedback"></div>
@@ -46,9 +49,7 @@
             </div>
 
             <button type="submit" class="btn button w-100 py-3">Cadastrar</button>
-            <button type="button" class="btn button w-100 py-3 mt-3">
-                <a href="index.php" class="text-decoration-none text-white">Entrar</a>
-            </button>
+            <a href="login.php" class="text-decoration-none text-white btn button w-100 py-3 mt-3">Entrar</a>
         </form>
     </main>
 
@@ -61,7 +62,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="src/scripts/register.js"></script>
+    <script src="../scripts/register.js"></script>
 </body>
 
 </html>

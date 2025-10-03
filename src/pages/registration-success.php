@@ -13,11 +13,11 @@
 
 <body class="py-4">
     <main class="w-100 m-auto mt-5 pt-5 text-center mainForm">
-            <img src="../imgs/logokairoo.png" class="mb-4" width="250">
+        <img src="../imgs/logokairoo.png" class="mb-4" width="250">
 
-            <button type="button" class="btn button w-100 py-3 mt-3">
-                <a href="../../index.php" class="text-decoration-none text-white">Continuar Para Login</a>
-            </button>
+        <button type="button" class="btn button w-100 py-3 mt-3">
+            <a href="login.php" class="text-decoration-none text-white">Continuar Para Login</a>
+        </button>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
