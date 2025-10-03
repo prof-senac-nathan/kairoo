@@ -21,7 +21,7 @@
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                     <a href="src/pages/home.php"
                         class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
-                        aria-current="page">INÍCIO</a>
+                        aria-current="page">INÍCIO 2</a>
                 </li>
 
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
