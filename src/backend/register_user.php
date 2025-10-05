@@ -13,11 +13,20 @@ if (mysqli_num_rows($resultFindEmail) > 0) {
     return;
 }
 
+if (str_contains($email, '@edu')) {
+    echo "Email Institucional Válido";
+} elseif (str_contains($email, '@prof')) {
+    echo "Email Institucional Válido";
+} else {
+    echo "Email Institucional Inválido";
+    return;
+}
+
 $sql = "INSERT INTO users (name_user, email_user, password_user) VALUES ('$name', '$email', '$password')";
 $result = mysqli_query($connection, $sql);
 
 if ($result) {
-    sleep(2);
+    sleep(1);
     header("Location: ../pages/registration-success.php");
     exit();
 }

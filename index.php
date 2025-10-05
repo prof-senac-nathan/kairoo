@@ -19,9 +19,9 @@
 
             <ul class="nav">
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                    <a href="src/pages/home.php"
+                    <a href="index.php"
                         class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
-                        aria-current="page">INÍCIO 2</a>
+                        aria-current="page">INÍCIO</a>
                 </li>
 
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
@@ -57,7 +57,7 @@
 
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
-                            href="src/pages/play.php">JOGAR</a>
+                            href="src/pages/login.php">ENTRAR</a>
                     </li>
                 </ul>
             </div>

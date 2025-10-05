@@ -9,10 +9,10 @@ $result = mysqli_query($connection, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     if (str_contains($email, '@edu')) {
-        header("Location: ../pages/aluno.html");
+        header("Location: ../pages/student.php");
         exit();
     } elseif (str_contains($email, '@prof')) {
-        header("Location: ../pages/prof.html");
+        header("Location: ../pages/teacher.php");
         exit();
     } else {
         echo "Tipo de usuário desconhecido.";
