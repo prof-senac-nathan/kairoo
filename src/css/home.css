@@ -69,3 +69,13 @@ a:hover,
         height: 400px;
     }
 }
+.box p-3 rounded-3 ,h2{
+  color: #48005d;
+  font-weight: bolder;
+}
+.box p-3 rounded-3 ,p{
+  color: white;
+}
+.turma{
+  
+}

@@ -29,8 +29,8 @@
                 </li>
 
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                    <a href="play.php"
-                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">JOGAR</a>
+                    <a href="login.php"
+                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">ENTRAR</a>
                 </li>
 
                 <li class="nav-item d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block">
@@ -56,13 +56,28 @@
 
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
-                            aria-current="page" href="play.php">JOGAR</a>
+                            aria-current="page" href="login.php">ENTRAR</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+       <main class="d-flex mx-3 my-5">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-md-12 col-12 d-flex flex-column gap-4">
+                <div class="box p-3 rounded-3">
+                    <h2>QUEM SOMOS?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus faucibus magna at faucibus. Nullam condimentum massa nec nulla commodo, eu sagittis nisl ornare. Sed placerat in quam eu tempor. Pellentesque non tortor justo. Maecenas ac nisl imperdiet, congue quam vitae, fermentum odio. Donec nec tellus augue. Aliquam accumsan molestie ipsum, vel blandit nulla rhoncus sed.
+Quisque sed tristique diam, eu lacinia neque. Donec eu placerat odio. Aenean accumsan varius risus, egestas blandit ante mattis sed. Pellentesque in efficitur eros. Nulla posuere mollis est, at efficitur ex sollicitudin at. Nam luctus elit lacus. Praesent quis ultricies libero.
+Ut at facilisis nisi. Maecenas in lectus nec dui consequat dignissim eget ut nibh. Aenean malesuada nisl et magna placerat pulvinar. Fusce ac viverra lectus. Nam eget purus </p>
 
+
+                        </div>
+                        <div class="turma">
+                            <img src="../imgs/turma.png" class="col-lg- 10" width="500">
+                            </div>
+
+                    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

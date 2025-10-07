@@ -19,9 +19,9 @@
 
             <ul class="nav">
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                    <a href="src/pages/home.php"
+                    <a href="index.php"
                         class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
-                        aria-current="page">INÍCIO 2</a>
+                        aria-current="page">INÍCIO</a>
                 </li>
 
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
@@ -57,7 +57,7 @@
 
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
-                            href="src/pages/play.php">JOGAR</a>
+                            href="src/pages/login.php">ENTRAR</a>
                     </li>
                 </ul>
             </div>
@@ -68,17 +68,14 @@
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-12 col-12 d-flex flex-column gap-4">
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2>OQUE E O KAIROO?</h2>
+                    <p>É uma plataforma de ensino baseada em gamificação, onde você mergulha em um universo envolvente que transforma a aprendizagem em uma experiência prazerosa.                        
+                    </p>
                 </div>
 
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2>PROBLEMAS</h2>
+                    <p>Dificuldades de concentração e falta de conteúdos que despertem o interesse do aluno.</p>
                 </div>
             </div>
 
@@ -110,17 +107,13 @@
 
             <div class="col-lg-3 col-md-12 col-12 d-flex flex-column gap-4">
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2>SOLUÇÃO</h2>
+                    <p>Plataforma baseada na gamificação, além recursos que permitem ao estudante acompanhar seu desempenho, identificar pontos fortes e áreas que precisam de mais atenção, estimulando uma consciência maior sobre seu próprio processo de aprendizado.</p>
                 </div>
 
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2>AJUDA</h2>
+                    <p>É uma plataforma de ensino baseada em gamificação, onde você mergulha em um universo envolvente que transforma a aprendizagem em uma experiência prazerosa.</p>
                 </div>
             </div>
         </div>
