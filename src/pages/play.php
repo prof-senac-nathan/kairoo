@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/game.css">
     <link rel="shortcut icon" href="../imgs/kairoo.png" type="image/x-icon">
 </head>
 
@@ -62,6 +63,21 @@
             </div>
         </div>
     </nav>
+
+    <main class="d-flex justify-content-center align-items-center my-5">
+
+    <iframe id="gameIframe" class="d-flex justify-content-center align-items-center"
+        src="../game/index.html" 
+        width="700" 
+        height="400" 
+        frameborder="0"
+    >
+        Seu navegador não suporta iframes.
+    </iframe>
+    
+    </main>
+
+    <script src="../scripts/playBtn.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
