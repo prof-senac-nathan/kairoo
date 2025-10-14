@@ -68,8 +68,8 @@
 
     <iframe id="gameIframe" class="d-flex justify-content-center align-items-center"
         src="../game/index.html" 
-        width="700" 
-        height="400" 
+        width="1280" 
+        height="720" 
         frameborder="0"
     >
         Seu navegador não suporta iframes.

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "connection.php";
 
 $email = mysqli_real_escape_string($connection, $_POST["email_user"]);
@@ -8,10 +9,16 @@ $sql = "SELECT * FROM users WHERE email_user = '$email' AND password_user = '$pa
 $result = mysqli_query($connection, $sql);
 
 if (mysqli_num_rows($result) > 0) {
+    $_SESSION['logado'] = true;
+
     if (str_contains($email, '@edu')) {
-        header("Location: ../pages/student.php");
+        $_SESSION['tipo_user'] = "ALUNO";
+
+        header("Location: ../../index.php");
         exit();
     } elseif (str_contains($email, '@prof')) {
+        $_SESSION['tipo_user'] = "PROFESSOR";
+
         header("Location: ../pages/teacher.php");
         exit();
     } else {

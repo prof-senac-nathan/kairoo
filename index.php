@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$tipo_user = $_SESSION['tipo_user'];
+$logado = $_SESSION['logado'];
+
+if (!$logado) {
+    header("Location: src/pages/login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,10 +41,24 @@
                         class="me-4 text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">SOBRE</a>
                 </li>
 
-                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                    <a href="src/pages/login.php"
-                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">ENTRAR</a>
-                </li>
+                <?php
+                if ($logado) {
+                ?>
+                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                        <a href="src/pages/play.php"
+                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                            aria-current="page">JOGAR</a>
+                    </li>
+                <?php
+                } else {
+                ?>
+                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                        <a href="src/pages/login.php"
+                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">ENTRAR</a>
+                    </li>
+                <?php
+                }
+                ?>
 
                 <li class="nav-item d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block">
                     <button class="navbar-menu rounded-3 p-2 align-items-center d-flex" type="button"
