@@ -12,14 +12,14 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['logado'] = true;
 
     if (str_contains($email, '@edu')) {
-        $_SESSION['tipo_user'] = "ALUNO";
+        $_SESSION['type_user'] = "STUDENT";
 
         header("Location: ../../index.php");
         exit();
     } elseif (str_contains($email, '@prof')) {
-        $_SESSION['tipo_user'] = "PROFESSOR";
+        $_SESSION['type_user'] = "TEACHER";
 
-        header("Location: ../pages/teacher.php");
+        header("Location: ../../index.php");
         exit();
     } else {
         echo "Tipo de usuário desconhecido.";

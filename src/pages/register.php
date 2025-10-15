@@ -49,6 +49,7 @@
             </div>
 
             <button type="submit" class="btn button w-100 py-3">Cadastrar</button>
+            
             <a href="login.php" class="text-decoration-none text-white btn button w-100 py-3 mt-3">Entrar</a>
         </form>
     </main>

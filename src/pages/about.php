@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+$type_user = $_SESSION['type_user'] ?? 'GUEST';
+$logado = $_SESSION['logado'] ?? false;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,19 +26,41 @@
             <ul class="nav">
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                     <a href="../../index.php"
-                        class="me-4 text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">INÍCIO</a>
+                        class="me-4 text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                        aria-current="page">INÍCIO</a>
                 </li>
 
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                     <a href="about.php"
-                        class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
-                        aria-current="page">SOBRE</a>
+                        class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">SOBRE</a>
                 </li>
 
-                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                    <a href="login.php"
-                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">ENTRAR</a>
-                </li>
+                <?php
+                if ($logado && $type_user == 'STUDENT') {
+                ?>
+                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                        <a href="play.php"
+                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                            aria-current="page">JOGAR</a>
+                    </li>
+                <?php
+                } elseif ($logado && $type_user == 'TEACHER') {
+                ?>
+                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                        <a href="createRoom.php"
+                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                            aria-current="page">CRIAR SALA</a>
+                    </li>
+                <?php
+                } else {
+                ?>
+                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                        <a href="login.php"
+                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">ENTRAR</a>
+                    </li>
+                <?php
+                }
+                ?>
 
                 <li class="nav-item d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block">
                     <button class="navbar-menu rounded-3 p-2 align-items-center d-flex" type="button"
@@ -40,24 +69,44 @@
                         <span class="navbar-toggler-icon"></span>
                 </li>
             </ul>
-            <!--Menu oculto (para celulares)----------------------------->
+            <!--Menu oculto (para celulares)-->
             <div class="collapse navbar-collapse d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block"
                 id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item mt-3 mb-3 ">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
-                            href="../../index.php">INÍCIO</a>
+                            aria-current="page" href="../../index.php">INICIO</a>
                     </li>
 
                     <li class="nav-item mb-3">
                         <a class="active fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
-                            href="#">SOBRE</a>
+                            href="about.php">SOBRE</a>
                     </li>
-
+                <?php
+                if ($logado && $type_user == 'STUDENT') {
+                ?>
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
-                            aria-current="page" href="login.php">ENTRAR</a>
+                            href="play.php">JOGAR</a>
                     </li>
+                <?php
+                } elseif ($logado && $type_user == 'TEACHER') {
+                ?>
+                    <li class="nav-item">
+                        <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
+                            href="createRoom.php">CRIAR SALA</a>
+                    </li>
+                <?php
+                } else {
+                ?>
+                    <li class="nav-item">
+                        <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
+                            href="login.php">ENTRAR</a>
+                    </li>
+                <?php
+                }
+                ?>
+
                 </ul>
             </div>
         </div>

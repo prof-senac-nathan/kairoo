@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-$tipo_user = $_SESSION['tipo_user'];
-$logado = $_SESSION['logado'];
+$type_user = $_SESSION['type_user'] ?? 'GUEST';
+$logado = $_SESSION['logado'] ?? false;
 
-if (!$logado) {
-    header("Location: src/pages/login.php");
-    exit;
-}
+//senão estiver logado, redireciona instantâneamente para tela de login
+// if (!$logado) {
+//     header("Location: src/pages/login.php");
+//     exit;
+// }
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +26,11 @@ if (!$logado) {
 </head>
 
 <body>
-    <nav class="navbar bg-header py-4">
+    <nav class="navbar bg-header py-3">
         <div class="container-fluid ms-3 me-3">
             <img src="src/imgs/logoheader.png" alt="Kairoo" width="150px">
 
-            <ul class="nav">
+            <ul class="nav d-flex align-items-center">
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                     <a href="index.php"
                         class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
@@ -42,12 +43,20 @@ if (!$logado) {
                 </li>
 
                 <?php
-                if ($logado) {
+                if ($logado && $type_user == 'STUDENT') {
                 ?>
                     <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                         <a href="src/pages/play.php"
                             class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
                             aria-current="page">JOGAR</a>
+                    </li>
+                <?php
+                } elseif ($logado && $type_user == 'TEACHER') {
+                ?>
+                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                        <a href="src/pages/createRoom.php"
+                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                            aria-current="page">CRIAR SALA</a>
                     </li>
                 <?php
                 } else {
@@ -66,6 +75,19 @@ if (!$logado) {
                         aria-controls="#navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </li>
+
+                <!-- !!!!!!!!!!FALTA INSERIR O ÍCONE DE PESSOA, LOGO APÓS, ADICIONAR O BOTAO NAS OUTRAS PÁGINAS!!!!!!!!!!!!!!!!! -->
+                <?php
+                if ($logado) {
+                ?>
+                    <li class="nav-item">
+                        <a href="src/pages/profile.php"
+                            class="ms-4 text-decoration-none rounded-pill fw-bold btn-profile d-flex justify-content-center align-items-center p-1 fs-5">O</a>
+                    </li>
+                <?php
+                }
+                ?>
+
             </ul>
             <!--Menu oculto (para celulares)-->
             <div class="collapse navbar-collapse d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block"
@@ -80,11 +102,31 @@ if (!$logado) {
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
                             href="src/pages/about.php">SOBRE</a>
                     </li>
-
+                <?php
+                if ($logado && $type_user == 'STUDENT') {
+                ?>
+                    <li class="nav-item">
+                        <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
+                            href="src/pages/play.php">JOGAR</a>
+                    </li>
+                <?php
+                } elseif ($logado && $type_user == 'TEACHER') {
+                ?>
+                    <li class="nav-item">
+                        <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
+                            href="src/pages/createRoom.php">CRIAR SALA</a>
+                    </li>
+                <?php
+                } else {
+                ?>
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
                             href="src/pages/login.php">ENTRAR</a>
                     </li>
+                <?php
+                }
+                ?>
+
                 </ul>
             </div>
         </div>
@@ -94,17 +136,18 @@ if (!$logado) {
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-12 col-12 d-flex flex-column gap-4">
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2 class="text-center fw-bold py-3" style="color: #48005d;">O QUE É O KAIROO?</h2>
+                    <p class="fs-5 fw-medium text-light">
+                        É uma plataforma de ensino baseada em gamificação, onde você mergulha em um universo envolvente 
+                         que transforma a aprendizagem em uma experiência prazerosa.
+                    </p>
                 </div>
 
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2 class="text-center fw-bold py-3" style="color: #48005d;">PROBLEMAS</h2>
+                    <p class="fs-5 fw-medium text-light">
+                        Dificuldades de concentração e falta de conteúdos que despertem o interesse do aluno.
+                    </p>
                 </div>
             </div>
 
@@ -136,17 +179,20 @@ if (!$logado) {
 
             <div class="col-lg-3 col-md-12 col-12 d-flex flex-column gap-4">
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2 class="text-center fw-bold py-3" style="color: #48005d;">SOLUÇÃO</h2>
+                    <p class="fs-5 fw-medium text-light">
+                        Plataforma baseada na gamificação, além recursos que permitem ao estudante acompanhar seu
+                         desempenho, identificar pontos fortes e áreas que precisam de mais atenção, estimulando uma
+                         consciência maior sobre seu próprio processo de aprendizado.
+                    </p>
                 </div>
 
                 <div class="box p-3 rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore dignissimos adipisci
-                        provident magni! Dolor, laudantium ipsum eos necessitatibus reiciendis quia repudiandae
-                        libero eaque aperiam dolorem laboriosam porro ex reprehenderit modi.</p>
+                    <h2 class="text-center fw-bold py-3" style="color: #48005d;">AJUDA</h2>
+                    <p class="fs-5 fw-medium text-light">
+                        É uma plataforma de ensino baseada em gamificação, onde você mergulha em um universo envolvente
+                         que transforma a aprendizagem em uma experiência prazerosa.
+                    </p>
                 </div>
             </div>
         </div>

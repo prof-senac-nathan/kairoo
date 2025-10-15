@@ -27,7 +27,7 @@ $result = mysqli_query($connection, $sql);
 
 if ($result) {
     sleep(1);
-    header("Location: ../pages/registration-success.php");
+    header("Location: ../pages/success_register.php");
     exit();
 }
 
