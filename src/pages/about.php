@@ -19,7 +19,7 @@ $logado = $_SESSION['logado'] ?? false;
 </head>
 
 <body>
-    <nav class="navbar bg-header py-4">
+    <nav class="navbar bg-header py-3">
         <div class="container-fluid ms-3 me-3">
             <img src="../imgs/logoheader.png" alt="Kairoo" width="150px">
 

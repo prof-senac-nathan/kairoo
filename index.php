@@ -26,7 +26,7 @@ $logado = $_SESSION['logado'] ?? false;
 </head>
 
 <body>
-    <nav class="navbar bg-header py-3">
+    <nav class="navbar bg-header py-2">
         <div class="container-fluid ms-3 me-3">
             <img src="src/imgs/logoheader.png" alt="Kairoo" width="150px">
 
@@ -82,7 +82,9 @@ $logado = $_SESSION['logado'] ?? false;
                 ?>
                     <li class="nav-item">
                         <a href="src/pages/profile.php"
-                            class="ms-4 text-decoration-none rounded-pill fw-bold btn-profile d-flex justify-content-center align-items-center p-1 fs-5">O</a>
+                            class="ms-4 text-decoration-none rounded-pill fw-bold btn-profile d-flex justify-content-center align-items-center p-1 fs-5">
+                            <!-- <img src="src/imgs/user.png" class="userAvatar img-fluid" width="32"> -->
+                        </a>
                     </li>
                 <?php
                 }

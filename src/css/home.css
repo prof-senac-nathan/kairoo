@@ -19,13 +19,21 @@ body {
 }
 
 .btn-profile {
-  background: #8e21db;
-  color: #fec107;
   border-bottom: 6px solid #6e02bb;
   border-right: 6px solid #6e02bb;
   width: 60px;
   height: 60px;
   transition: 0.2s;
+
+  background: url("../imgs/user.png") no-repeat;
+  background-position: center;
+  background-color: #8e21db;
+}
+
+.btn-profile:hover {
+  background: url("../imgs/user2.png") no-repeat;
+  background-position: center;
+  background-color: #fec107;
 }
 
 a:hover,
@@ -75,7 +83,7 @@ a:hover,
 }
 
 @media (max-width: 1320px) {
-    .box {
-        height: 450px;
-    }
+  .box {
+    height: 450px;
+  }
 }
