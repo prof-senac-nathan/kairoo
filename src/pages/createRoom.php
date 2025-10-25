@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+$type_user = $_SESSION['type_user'] ?? 'GUEST';
+$logado = $_SESSION['logado'] ?? false;
+
+if ($logado && $type_user == 'TEACHER') {
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -40,6 +49,19 @@
                         aria-controls="#navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </li>
+
+                <?php
+                if ($logado) {
+                ?>
+                    <li class="nav-item">
+                        <a href="../pages/profile.php"
+                            class="ms-4 text-decoration-none rounded-pill fw-bold btn-profile d-flex justify-content-center align-items-center p-1 fs-5">
+                        </a>
+                    </li>
+                <?php
+                }
+                ?>
+                
             </ul>
             <!--Menu oculto (para celulares)----------------------------->
             <div class="collapse navbar-collapse d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block"
@@ -78,3 +100,7 @@
 </body>
 
 </html>
+
+<?php
+}
+?>

@@ -1,0 +1,52 @@
+.box1 {
+  background: #c190e5;
+  text-align: justify;
+  height: 450px;
+}
+
+.localRow {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.localCarousel {
+  /* margin: 20px auto; */
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.localCarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 30s infinite linear;
+  padding-right: 1.5rem;
+}
+
+.item {
+  padding: 1rem ;
+  border-radius: 0.5rem;
+  background: #c190e5;
+  text-align: justify;
+  height: 300px;
+  width: 600px;
+}
+
+.liMarker::marker {
+  color: #7a3db0;
+}
+
+@keyframes spin {
+  from {translate: 50%;}
+  to {translate: -50%;}
+}

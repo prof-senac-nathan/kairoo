@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+$type_user = $_SESSION['type_user'] ?? 'GUEST';
+$logado = $_SESSION['logado'] ?? false;
+
+if ($logado && $type_user == 'STUDENT') {
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,16 +17,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="../css/play.css">
     <link rel="shortcut icon" href="../imgs/kairoo.png" type="image/x-icon">
 </head>
 
 <body>
-    <nav class="navbar bg-header py-3">
+    <nav class="navbar bg-header">
         <div class="container-fluid ms-3 me-3">
             <img src="../imgs/logoheader.png" alt="Kairoo" width="150px">
 
-            <ul class="nav">
+            <ul class="nav d-flex align-items-center">
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                     <a href="../../index.php"
                         class="me-4 text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">INÍCIO</a>
@@ -40,6 +49,13 @@
                         aria-controls="#navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </li>
+
+                <li class="nav-item">
+                    <a href="../pages/profile.php"
+                        class="ms-4 text-decoration-none rounded-pill fw-bold btn-profile d-flex justify-content-center align-items-center p-1 fs-5">
+                    </a>
+                </li>
+
             </ul>
             <!--Menu oculto (para celulares)----------------------------->
             <div class="collapse navbar-collapse d-xxl-none d-xl-none d-xxl-block d-lg-none d-xl-block d-md-none d-lg-block"
@@ -64,20 +80,85 @@
         </div>
     </nav>
 
-    <main class="d-flex justify-content-center align-items-center my-5">
+    <main class="d-flex justify-content-center align-items-center my-5 flex-column">
 
-    <iframe id="gameIframe" class="d-flex justify-content-center align-items-center"
-        src="../game/index.html" 
-        width="1280" 
-        height="720" 
-        frameborder="0"
-    >
-        Seu navegador não suporta iframes.
-    </iframe>
-    
+    <div class="row">
+        <div class="col">
+            <div id="gameContainer" class="gameBox rounded-3 p-5 gap-5 flex-column">
+                <h1 style="color: #fff; font-size: 4rem;">
+                    <span class="fw-bold">BIOLOGIA</span> - LEANDRO MANUEL
+                </h1>
+
+                <button id="playButton" class="play-btn rounded-pill fw-bold px-3 py-1">JOGAR</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <h1 class="fw-bold availableRooms" style="color: #8e21db; font-size: 4rem;">SALAS PRONTAS</h1>
+    </div>
+
+    <div class="row mt-3 gap-4">
+        <div class="col">
+            <div class="roomBox flex-column gap-5">
+                <h3 style="color: #fff;">
+                    <span class="fw-bold">BIOLOGIA</span> - LEANDRO MANUEL
+                </h3>
+                <button class="play-btn rounded-pill fw-bold px-3 py-1">JOGAR</button>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="roomBox flex-column gap-5">
+                <h3 style="color: #fff;">
+                    <span class="fw-bold">BIOLOGIA</span> - LEANDRO MANUEL
+                </h3>
+                <button class="play-btn rounded-pill fw-bold px-3 py-1">JOGAR</button>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="roomBox flex-column gap-5">
+                <h3 style="color: #fff;">
+                    <span class="fw-bold">BIOLOGIA</span> - LEANDRO MANUEL
+                </h3>
+                <button class="play-btn rounded-pill fw-bold px-3 py-1">JOGAR</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3 gap-4">
+        <div class="col">
+            <div class="roomBox flex-column gap-5">
+                <h3 style="color: #fff;">
+                    <span class="fw-bold">BIOLOGIA</span> - LEANDRO MANUEL
+                </h3>
+                <button class="play-btn rounded-pill fw-bold px-3 py-1">JOGAR</button>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="roomBox flex-column gap-5">
+                <h3 style="color: #fff;">
+                    <span class="fw-bold">BIOLOGIA</span> - LEANDRO MANUEL
+                </h3>
+                <button class="play-btn rounded-pill fw-bold px-3 py-1">JOGAR</button>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="roomBox flex-column gap-5">
+                <h3 style="color: #fff;">
+                    <span class="fw-bold">BIOLOGIA</span> - LEANDRO MANUEL
+                </h3>
+                <button class="play-btn rounded-pill fw-bold px-3 py-1">JOGAR</button>
+            </div>
+        </div>
+    </div>
+
     </main>
 
-    <script src="../scripts/playBtn.js"></script>
+    <script src="../scripts/play.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -91,3 +172,7 @@
 </body>
 
 </html>
+
+<?php
+}
+?>

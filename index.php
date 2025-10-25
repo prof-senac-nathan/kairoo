@@ -26,11 +26,11 @@ $logado = $_SESSION['logado'] ?? false;
 </head>
 
 <body>
-    <nav class="navbar bg-header py-2">
+    <nav class="navbar bg-header">
         <div class="container-fluid ms-3 me-3">
             <img src="src/imgs/logoheader.png" alt="Kairoo" width="150px">
 
-            <ul class="nav d-flex align-items-center">
+            <ul class="nav d-flex align-items-center <?php if (!$logado) echo 'py-2'; ?> ">
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                     <a href="index.php"
                         class="me-4 text-decoration-none active rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
@@ -45,26 +45,26 @@ $logado = $_SESSION['logado'] ?? false;
                 <?php
                 if ($logado && $type_user == 'STUDENT') {
                 ?>
-                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                        <a href="src/pages/play.php"
-                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
-                            aria-current="page">JOGAR</a>
-                    </li>
+                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                    <a href="src/pages/play.php"
+                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                        aria-current="page">JOGAR</a>
+                </li>
                 <?php
                 } elseif ($logado && $type_user == 'TEACHER') {
                 ?>
-                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                        <a href="src/pages/createRoom.php"
-                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
-                            aria-current="page">CRIAR SALA</a>
-                    </li>
+                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                    <a href="src/pages/createRoom.php"
+                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5"
+                        aria-current="page">CRIAR SALA</a>
+                </li>
                 <?php
                 } else {
                 ?>
-                    <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
-                        <a href="src/pages/login.php"
-                            class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">ENTRAR</a>
-                    </li>
+                <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
+                    <a href="src/pages/login.php"
+                        class="text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">ENTRAR</a>
+                </li>
                 <?php
                 }
                 ?>
@@ -76,16 +76,14 @@ $logado = $_SESSION['logado'] ?? false;
                         <span class="navbar-toggler-icon"></span>
                 </li>
 
-                <!-- !!!!!!!!!!FALTA INSERIR O ÍCONE DE PESSOA, LOGO APÓS, ADICIONAR O BOTAO NAS OUTRAS PÁGINAS!!!!!!!!!!!!!!!!! -->
                 <?php
                 if ($logado) {
                 ?>
-                    <li class="nav-item">
-                        <a href="src/pages/profile.php"
-                            class="ms-4 text-decoration-none rounded-pill fw-bold btn-profile d-flex justify-content-center align-items-center p-1 fs-5">
-                            <!-- <img src="src/imgs/user.png" class="userAvatar img-fluid" width="32"> -->
-                        </a>
-                    </li>
+                <li class="nav-item">
+                    <a href="src/pages/profile.php"
+                        class="ms-4 text-decoration-none rounded-pill fw-bold btn-profile d-flex justify-content-center align-items-center p-1 fs-5">
+                    </a>
+                </li>
                 <?php
                 }
                 ?>
@@ -104,28 +102,28 @@ $logado = $_SESSION['logado'] ?? false;
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
                             href="src/pages/about.php">SOBRE</a>
                     </li>
-                <?php
+                    <?php
                 if ($logado && $type_user == 'STUDENT') {
                 ?>
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
                             href="src/pages/play.php">JOGAR</a>
                     </li>
-                <?php
+                    <?php
                 } elseif ($logado && $type_user == 'TEACHER') {
                 ?>
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
                             href="src/pages/createRoom.php">CRIAR SALA</a>
                     </li>
-                <?php
+                    <?php
                 } else {
                 ?>
                     <li class="nav-item">
                         <a class="btn-collapseBar fw-bold py-2 text-decoration-none rounded-3 d-flex justify-content-center"
                             href="src/pages/login.php">ENTRAR</a>
                     </li>
-                <?php
+                    <?php
                 }
                 ?>
 
@@ -140,8 +138,8 @@ $logado = $_SESSION['logado'] ?? false;
                 <div class="box p-3 rounded-3">
                     <h2 class="text-center fw-bold py-3" style="color: #48005d;">O QUE É O KAIROO?</h2>
                     <p class="fs-5 fw-medium text-light">
-                        É uma plataforma de ensino baseada em gamificação, onde você mergulha em um universo envolvente 
-                         que transforma a aprendizagem em uma experiência prazerosa.
+                        É uma plataforma de ensino baseada em gamificação, onde você mergulha em um universo envolvente
+                        que transforma a aprendizagem em uma experiência prazerosa.
                     </p>
                 </div>
 
@@ -184,8 +182,8 @@ $logado = $_SESSION['logado'] ?? false;
                     <h2 class="text-center fw-bold py-3" style="color: #48005d;">SOLUÇÃO</h2>
                     <p class="fs-5 fw-medium text-light">
                         Plataforma baseada na gamificação, além recursos que permitem ao estudante acompanhar seu
-                         desempenho, identificar pontos fortes e áreas que precisam de mais atenção, estimulando uma
-                         consciência maior sobre seu próprio processo de aprendizado.
+                        desempenho, identificar pontos fortes e áreas que precisam de mais atenção, estimulando uma
+                        consciência maior sobre seu próprio processo de aprendizado.
                     </p>
                 </div>
 
@@ -193,7 +191,7 @@ $logado = $_SESSION['logado'] ?? false;
                     <h2 class="text-center fw-bold py-3" style="color: #48005d;">AJUDA</h2>
                     <p class="fs-5 fw-medium text-light">
                         É uma plataforma de ensino baseada em gamificação, onde você mergulha em um universo envolvente
-                         que transforma a aprendizagem em uma experiência prazerosa.
+                        que transforma a aprendizagem em uma experiência prazerosa.
                     </p>
                 </div>
             </div>
@@ -204,11 +202,11 @@ $logado = $_SESSION['logado'] ?? false;
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <title>Kairoo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/register.css">
     <link rel="shortcut icon" href="../imgs/kairoo.png" type="image/x-icon">
 </head>
 
@@ -48,7 +48,7 @@
                 <label class="form-check-label" for="flexCheckDefault" style="color: white;">Lembrar senha</label>
             </div>
 
-            <button type="submit" class="btn button w-100 py-3">Cadastrar</button>
+            <button type="submit" class="btn button w-100 py-3">Cadastrar-se</button>
             
             <a href="login.php" class="text-decoration-none text-white btn button w-100 py-3 mt-3">Entrar</a>
         </form>

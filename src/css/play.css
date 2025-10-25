@@ -1,0 +1,52 @@
+.gameBox {
+  background: #c190e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1600px;
+}
+
+.gameIframe {
+    width: 1283.5px;
+    height: 723.5px;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.play-btn {
+  background: #8e21db;
+  color: #ffff;
+  border-top: none;
+  border-left: 6px solid #6e02bb;
+  border-bottom: 6px solid #6e02bb;
+  border-right: 6px solid #6e02bb;
+  width: 210px;
+  height: 70px;
+  transition: 0.2s;
+  font-size: xx-large;
+}
+
+.play-btn:hover {
+  background: #fec107;
+  color: #ffff;
+  border-top: none;
+  border-left: 6px solid #ec8842;
+  border-bottom: 6px solid #ec8842;
+  border-right: 6px solid #ec8842;
+}
+
+.roomBox {
+  background: #e1c5f5;
+  width: 500px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+}
+.availableRooms {
+    text-shadow: 0 0 5px #69606e;
+}
