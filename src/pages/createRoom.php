@@ -22,11 +22,11 @@ if ($logado && $type_user == 'TEACHER') {
 </head>
 
 <body>
-    <nav class="navbar bg-header py-3">
+    <nav class="navbar bg-header">
         <div class="container-fluid ms-3 me-3">
             <img src="../imgs/logoheader.png" alt="Kairoo" width="150px">
 
-            <ul class="nav">
+            <ul class="nav d-flex align-items-center">
                 <li class="nav-item d-sm-none d-md-block d-none d-sm-block">
                     <a href="../../index.php"
                         class="me-4 text-decoration-none rounded-pill fw-bold btn-header d-flex justify-content-center p-1 fs-5">INÍCIO</a>
